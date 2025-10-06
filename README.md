@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+### Project: Meeting Example
+Your goal is to implement UI pages based on a Figma design provided to you. Please follow the standards below and deliver a runnable, clean, and maintainable result.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Requirements
+- Node.js: LTS (recommended: 18 or 20)
+- Package manager: one of `npm`, `yarn`, or `pnpm`
+- Modern browsers for testing (Chrome/Edge/Firefox)
+- Figma account to view and export assets
 
-## Available Scripts
+### Quick Start
+- If this repo already has a `package.json`:
+  1) Install dependencies:
+  ```bash
+  npm install
+  # or
+  yarn
+  # or
+  pnpm install
+  ```
+  2) Run development server:
+  ```bash
+  npm start
+  ```
+  3) Build production:
+  ```bash
+  npm run build
+  ```
 
-In the project directory, you can run:
+### Required and Suggested Packages
+- UI library: `@mui/material`, `@mui/icons-material`, `@emotion/react`, `@emotion/styled` (required)
+- Routing: `react-router-dom` (required)
+- Forms/Validation: `formik`, `yup` (required)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Development Standards
+- UI must be implemented using MUI only (no Tailwind, no other UI frameworks).
+- Create and use a centralized MUI theme (palette, typography, spacing) where appropriate.
+- Responsiveness: support 768px, 1024px, and 1440px widths.
+- Design fidelity: match Figma spacing, typography, and colors precisely.
+- Routing: use `react-router-dom` (v6) for all navigation.
+- Forms: use `formik` + `yup` for form state and validation.
+- State and architecture: small, single-responsibility, testable components.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Working with Figma
+- Use Inspect to extract sizes, spacing, typography, and colors.
+- Export icons as SVG and use them as React components.
+- Web-optimize images (format, size) and consider lazy loading where appropriate.
+- Implement explicit Hover/Active/Disabled states matching Figma.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Acceptance Criteria
+- Only MUI is used for UI components, icons and styling.
+- A custom-designed Login page exists, implemented with MUI.
+- All forms use `formik` with `yup` validation (inline errors, disabled submit on invalid).
+- Visual implementation closely matches Figma (±2px acceptable).
+- Reusable components and short docs or stories.
+- Responsive at the listed breakpoints.
+- No console errors and no TypeScript warnings.
+- Lint passes with no errors.
 
-### `npm run build`
+### Timeline
+- Project deadline: 4 days from assignment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tasks
+receives one or more Figma pages. Additionally, a custom Login page (own design) must be implemented with MUI.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Task 1: Implement the custom Login page
+  - Route: `/login` via `react-router-dom`
+  - Use MUI components only; apply theme tokens consistently
+  - Form with `formik` + `yup` (email/username + password, show validation errors)
+  - Show loading/disabled state on submit; basic success/failure handling
+  - Ensure responsiveness at 768/1024/1440
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Task 2: Implement the assigned primary Figma page
+  - Set up the route (e.g., `/`)
+  - Implement layout with MUI Grid/Box and shared Header/Footer
+  - Extract and apply design tokens (colors, typography, spacing)
+  - Build needed reusable components (e.g., Button variants, Input, Tag, Avatar)
+  - Handle interaction states: Hover/Active/Focus/Disabled
+  - Ensure responsiveness and a11y similar to the login page
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Final delivery should include:
+- PR folder targeting `main.zip`
+- Short description of work done + screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Good luck!
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
